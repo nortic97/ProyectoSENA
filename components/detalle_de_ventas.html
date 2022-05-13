@@ -38,22 +38,21 @@
 
     <br>
 
-    <a type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#registroModal">Agregar producto</a>
+    <a type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#registroModal">Generar Venta</a>
 
     <div class="container">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
             <div class="border p-5 bg-light box-border">
-                <h4 class="text-center">Panel de control para Productos</h4>
+                <h4 class="text-center">Panel de control para Ventas</h4>
                 <br>
                 <table class="table table-hover">
                     <thead class="sticky-top table-dark sticky-offset centrar-thead">
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Codigo</th>
-                            <th scope="col">ID Proveedor</th>
-                            <th scope="col">Stock</th>
+                            <th scope="col">ID Producto</th>
+                            <th scope="col">Cantidad</th>
                             <th scope="col">Precio</th>
+                            <th scope="col">ID Venta</th>
                             <th scope="col">Fecha de creación</th>
                             <th scope="col">Fecha de actualización</th>
                             <th scope="col" colspan="2">Acción</th>
@@ -62,12 +61,12 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Nombre 1</td>
-                            <td>3100000001</td>
                             <td class="centrar-thead"><a type="button" class="link-info" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" >1</a></td>
-                            <td>10</td>
-                            <td>1000</td>
+                                    data-bs-target="#infoModal">1</a></td>
+                            <td>3</td>
+                            <td>3000</td>
+                            <td class="centrar-thead"><a type="button" class="link-info" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal">1</a></td>
                             <td>2022-05-22</td>
                             <td>2022-05-22</td>
                             <td><button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
@@ -93,30 +92,29 @@
                         <div class="d-flex justify-content-center">
 
                             <form action="">
+
                                 <div class="mb-3">
-                                    <label for="documento-form" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="documento-form"
-                                        aria-describedby="emailHelp">
+                                    <label for="idproducto-form" class="form-label">ID Producto</label>
+                                    <select class="form-select" name="rol-select" id="rol-form">
+                                        <option selected>Elija una opción</option>
+                                        <option value="1">1 - Herbicida Rondounp</option>
+                                        <option value="2">2 - Abono Triple Quince</option>
+                                    </select>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="nombre-form" class="form-label">Código</label>
+                                    <label for="nombre-form" class="form-label">Cantidad</label>
                                     <input type="text" class="form-control" id="nombre-form"
                                         aria-describedby="emailHelp">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="rol-form" class="form-label">Proveedor</label>
+                                    <label for="proveedor-form" class="form-label">Proveedor</label>
                                     <select class="form-select" name="rol-select" id="rol-form">
                                         <option selected>Elija una opción</option>
                                         <option value="1">1 - Agro Viveros</option>
                                         <option value="2">2 - Surti Abonos </option>
                                     </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="telefono-form" class="form-label">Stock</label>
-                                    <input type="text" class="form-control" id="telefono-form"
-                                        aria-describedby="emailHelp">
                                 </div>
 
                                 <div class="mb-3">
@@ -126,6 +124,15 @@
                                         <input type="text" class="form-control" aria-label="Precio" id="precio-form">
                                         <span class="input-group-text">.00</span>
                                     </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="IDVenta-form" class="form-label">ID Venta</label>
+                                    <select class="form-select" name="rol-select" id="rol-form">
+                                        <option selected>Elija una opción</option>
+                                        <option value="1">1 - Agro Viveros</option>
+                                        <option value="2">2 - Surti Abonos </option>
+                                    </select>
                                 </div>
 
                             </form>
@@ -229,6 +236,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar cambios</button>
                 </div>
             </div>
         </div>

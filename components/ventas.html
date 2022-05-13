@@ -38,22 +38,20 @@
 
     <br>
 
-    <a type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#registroModal">Agregar producto</a>
+    <a type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#registroModal">Generar Venta</a>
 
     <div class="container">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
             <div class="border p-5 bg-light box-border">
-                <h4 class="text-center">Panel de control para Productos</h4>
+                <h4 class="text-center">Panel de control para Ventas</h4>
                 <br>
                 <table class="table table-hover">
                     <thead class="sticky-top table-dark sticky-offset centrar-thead">
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Codigo</th>
-                            <th scope="col">ID Proveedor</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">Precio</th>
+                            <th scope="col">ID Cliente</th>
+                            <th scope="col">ID Usuario</th>
+                            <th scope="col">Total</th>
                             <th scope="col">Fecha de creación</th>
                             <th scope="col">Fecha de actualización</th>
                             <th scope="col" colspan="2">Acción</th>
@@ -62,12 +60,11 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Nombre 1</td>
-                            <td>3100000001</td>
                             <td class="centrar-thead"><a type="button" class="link-info" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" >1</a></td>
-                            <td>10</td>
-                            <td>1000</td>
+                                    data-bs-target="#infoModal">1</a></td>
+                            <td class="centrar-thead"><a type="button" class="link-info" data-bs-toggle="modal"
+                                    data-bs-target="#infoUModal">1</a></td>
+                            <td>$3.000.00</td>
                             <td>2022-05-22</td>
                             <td>2022-05-22</td>
                             <td><button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
@@ -93,34 +90,27 @@
                         <div class="d-flex justify-content-center">
 
                             <form action="">
-                                <div class="mb-3">
-                                    <label for="documento-form" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="documento-form"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="nombre-form" class="form-label">Código</label>
-                                    <input type="text" class="form-control" id="nombre-form"
-                                        aria-describedby="emailHelp">
-                                </div>
 
                                 <div class="mb-3">
-                                    <label for="rol-form" class="form-label">Proveedor</label>
-                                    <select class="form-select" name="rol-select" id="rol-form">
+                                    <label for="idcliente-form" class="form-label">ID Cliente</label>
+                                    <select class="form-select" name="rol-select" id="idcliente-form">
                                         <option selected>Elija una opción</option>
-                                        <option value="1">1 - Agro Viveros</option>
-                                        <option value="2">2 - Surti Abonos </option>
+                                        <option value="1">1 - David Nova</option>
+                                        <option value="2">2 - Milena Cuenca</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="telefono-form" class="form-label">Stock</label>
-                                    <input type="text" class="form-control" id="telefono-form"
-                                        aria-describedby="emailHelp">
+                                    <label for="idusuario-form" class="form-label">ID Usuario</label>
+                                    <select class="form-select" name="rol-select" id="idusuario-form">
+                                        <option selected>Elija una opción</option>
+                                        <option value="1">1 - Miguel Cutiva</option>
+                                        <option value="2">2 - Diego Romero</option>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="precio-form" class="form-label">Precio</label>
+                                    <label for="total-form" class="form-label">Total</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">$</span>
                                         <input type="text" class="form-control" aria-label="Precio" id="precio-form">
@@ -145,7 +135,7 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Generar Venta</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -153,34 +143,27 @@
                         <div class="d-flex justify-content-center">
 
                             <form action="">
-                                <div class="mb-3">
-                                    <label for="documento-form" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="documento-form"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="nombre-form" class="form-label">Código</label>
-                                    <input type="text" class="form-control" id="nombre-form"
-                                        aria-describedby="emailHelp">
-                                </div>
 
                                 <div class="mb-3">
-                                    <label for="rol-form" class="form-label">Proveedor</label>
-                                    <select class="form-select" name="rol-select" id="rol-form">
+                                    <label for="idcliente-form" class="form-label">ID Cliente</label>
+                                    <select class="form-select" name="rol-select" id="idcliente-form">
                                         <option selected>Elija una opción</option>
-                                        <option value="1">1 - Agro Viveros</option>
-                                        <option value="2">2 - Surti Abonos </option>
+                                        <option value="1">1 - David Nova</option>
+                                        <option value="2">2 - Milena Cuenca</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="telefono-form" class="form-label">Stock</label>
-                                    <input type="text" class="form-control" id="telefono-form"
-                                        aria-describedby="emailHelp">
+                                    <label for="idusuario-form" class="form-label">ID Usuario</label>
+                                    <select class="form-select" name="rol-select" id="idusuario-form">
+                                        <option selected>Elija una opción</option>
+                                        <option value="1">1 - Miguel Cutiva</option>
+                                        <option value="2">2 - Diego Romero</option>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="precio-form" class="form-label">Precio</label>
+                                    <label for="total-form" class="form-label">Total</label>
                                     <div class="input-group mb-3">
                                         <span class="input-group-text">$</span>
                                         <input type="text" class="form-control" aria-label="Precio" id="precio-form">
@@ -205,7 +188,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Información del Proveedor</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -214,8 +197,8 @@
 
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title">Agro Viveros</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">CC o RUT: 106975008</h6>
+                                    <h5 class="card-title">David Nova</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Documento: 106975008</h6>
                                     <p class="card-text">
                                         Telefono : 3153481112
                                         <span><br></span>
@@ -233,6 +216,40 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="infoUModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Información del Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Miguel Cutiva</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Documento: 52184567</h6>
+                                    <p class="card-text">
+                                        Telefono : 3154569978
+                                        <span><br></span>
+                                        Correo: tucorreo@example.com
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
